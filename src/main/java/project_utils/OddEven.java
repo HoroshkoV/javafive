@@ -94,6 +94,7 @@ public class OddEven {
 //Якщо M кратне лише 9, а не 7, тоді повертається "Bad Number"
 //Якщо M є лише кратним 11, повертається "Poor Number"
 //Якщо M не задовольняє жодній із наведених вище умов, поверніть «-1»
+
     public String mMetod(int m) {
         if (m % 63 == 0) {
             return "Good Number";

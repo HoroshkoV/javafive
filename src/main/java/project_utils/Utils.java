@@ -16,7 +16,10 @@ public class Utils {
         for (int i = 63; i < 1000; i = i + 11) {
             System.out.println("Це " + i + " число має значення " + new OddEven().mMetod(i));
         }
+        for (int i = 0; i < 5; i++) {
+            System.out.println(number[i]);
 
+        }
 
 
     }
