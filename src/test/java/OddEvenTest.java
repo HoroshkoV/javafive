@@ -138,4 +138,73 @@ public class OddEvenTest {
         int actualResult = new OddEven().areNumbersEqual(a, b);
         Assert.assertEquals(actualResult, expectedResult);
     }
+
+    @Test
+    public void testMinMaxAve() {
+        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        int a = 2;
+        int b = 6;
+        int[] expectedResult = new int[]{3, 7, 5};
+        int[] actualResult = new OddEven().minMaxAve(array, a, b);
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testIntersection_PositiveNumber() {
+        int[] arrayOne = {1, 2, 4, 5, 89};
+        int[] arrayTwo = {8, 9, 4, 2};
+        int[] expectedResult = new int[]{2, 4};
+        int[] actualResult = new OddEven().intersection(arrayOne, arrayTwo);
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testIntersection_NegativeNumber() {
+        int[] arrayOne = {1, 2, 4, 5, 8, 9};
+        int[] arrayTwo = {8, 9, -4, -2};
+        int[] expectedResult = new int[]{8, 9};
+        int[] actualResult = new OddEven().intersection(arrayOne, arrayTwo);
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testIntersection_NoMatches() {
+        int[] arrayOne = {1, 2, 4, 5, 89};
+        int[] arrayTwo = {8, 9, 45};
+        int[] expectedResult = new int[]{};
+        int[] actualResult = new OddEven().intersection(arrayOne, arrayTwo);
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testPeakElement() {
+        int[] peakElement = {3, 2, 7, 5, 1, 9, 23, 1};
+        int[] expectedResult = {3, 7, 23};
+        int[] actualResult = new OddEven().peakElement(peakElement);
+        Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testReverseArray() {
+        int[] reverseArray = {2, 7, 3, 10};
+        int[] expectedResult = {10, 3, 7, 2};
+        int[] actualResult = new OddEven().reverseArray(reverseArray);
+        Assert.assertEquals(actualResult,expectedResult);
+    }
+
+    @Test
+    public void testSortArray(){
+        int[] sortArray ={4, 3, 7, 12, 5, 2, 9, 4, 12};
+        int[] expectedResult = {2, 3, 4, 4, 5, 7, 9, 12, 12};
+        int[] actualResult = new OddEven().sortArray(sortArray);
+        Assert.assertEquals(actualResult,expectedResult);
+    }
+    @Test
+    public void teatKthLargest(){
+        int[] kthLargest ={4, 3, 7, 13, 5, 2, 9, 4, 12};
+        int number = 3;
+        int expectedResult = 9;
+        int actualResult = new OddEven().kthLargest(kthLargest,number);
+        Assert.assertEquals(actualResult,expectedResult);
+    }
 }

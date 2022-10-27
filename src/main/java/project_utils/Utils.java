@@ -20,7 +20,40 @@ public class Utils {
             System.out.println(number[i]);
 
         }
+        int[] ggg = new int[]{1, 2, 3, 4, 5, 6, 7, 8};
+        int a = 2;
+        int b = 6;
+        System.out.println(Arrays.toString(new OddEven().minMaxAve(ggg, a, b)));
 
+        int[] arrayOne = {1, 2, 4, 5, 89};
+        int[] arrayTwo = {8, 9, 4, 2};
+        System.out.println(Arrays.toString(new OddEven().intersection(arrayOne, arrayTwo)));
+
+        int[] arrayOn = {1, 2, 4, 5, 8, 9};
+        int[] arrayTw = {8, 9, -4, -2};
+        System.out.println(Arrays.toString(new OddEven().intersection(arrayOn, arrayTw)));
+
+        int[] arrayO = {1, 2, 4, 5, 89};
+        int[] arrayT = {8, 9, 45};
+        System.out.println(Arrays.toString(new OddEven().intersection(arrayO, arrayT)));
+
+        int[] peakElement = {1, 1, 1, 1, 1, 1, 1, 11};
+        System.out.println(Arrays.toString(new OddEven().peakElement(peakElement)));
+
+
+        System.out.println(Arrays.toString(new OddEven().reverseArray(ggg)));
+
+
+        int[] kkk = {4, 3, 7, 12, 5, 2, 9, 4, 12};
+        System.out.println(Arrays.toString(new OddEven().sortArray(kkk)));
+
+
+        int[] array= {4, 3, 7, 13, 5, 2, 9, 4, 12};
+        int numberN = 3;
+        System.out.println(new OddEven().kthLargest(array,numberN));
+
+        int[] negative = {4, -3, 7, -12, 5, -2, 9, 4, 12};
+        System.out.println(Arrays.toString(new OddEven().negativeOnTheRight(negative)));
 
     }
 }
