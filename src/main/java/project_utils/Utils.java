@@ -48,12 +48,47 @@ public class Utils {
         System.out.println(Arrays.toString(new OddEven().sortArray(kkk)));
 
 
-        int[] array= {4, 3, 7, 13, 5, 2, 9, 4, 12};
+        int[] array = {4, 3, 7, 13, 5, 2, 9, 4, 12};
         int numberN = 3;
-        System.out.println(new OddEven().kthLargest(array,numberN));
+        System.out.println(new OddEven().kthLargest(array, numberN));
 
         int[] negative = {4, -3, 7, -12, 5, -2, 9, 4, 12};
         System.out.println(Arrays.toString(new OddEven().negativeOnTheRight(negative)));
+
+
+        int[] ss = {4, 3, 7, 12, 5, 2, 9, 4, 12};
+        int q = 11;
+        System.out.println(Arrays.deepToString(new OddEven().sumOfTwo(ss, q)));
+
+        System.out.println("------------------------");
+        int[] qqwq = {3, 2, 5, 3, 1, 5, 4, 2, 1, 4, 5, 3, 2, 1, 4, 5, 3, 2, 1, 22, 22, 11, 56, 6, 5};
+     //   System.out.println(new OddEven().numberOccurrences(qqwq));
+       // System.out.println(Arrays.toString(new OddEven().sortArray(qqwq)));
+    //    System.out.println(new OddEvenValuesInArray().countEvenValuesInArray(qqwq));
+     //   System.out.println(new OddEvenValuesInArray().countOddValuesInArray(qqwq));
+
+        System.out.println(new ManipulationsWithArrays().areValuesGreaterThanNumber(ss, 1));
+
+
+        String str = "3 4 1 8 10 12.3";
+        System.out.println(Arrays.toString(new CreateArray().createIntArrayFromText(str)));
+
+       // System.out.println(Arrays.toString(new OddEvenElementsInArray().countOddEvenValuesInArray(qqwq)));
+       // System.out.println(Arrays.deepToString(new OddEvenElementsInArray().createOddEvenArray(qqwq)));
+
+        System.out.println("------------------------");
+        int[] ooo = {3,1,2,4,5,8,7,6};
+        int[] oo ={7,6,8,5,4,1,2,3};
+
+        System.out.println(Arrays.toString(new ManipulationsWithArrays().getTheGreaterHalf(ooo)));
+        System.out.println(Arrays.toString(new ManipulationsWithArrays().getTheGreaterHalf(oo)));
+        System.out.println(Arrays.toString(new ManipulationsWithArrays().getTheGreaterHalf(qqwq)));
+
+        System.out.println(Arrays.toString(new CreateArray().multiplesOf(0)));
+        System.out.println(Arrays.toString(new CreateArray().multiplesOf(11)));
+        System.out.println(Arrays.toString(new CreateArray().multiplesOf(10)));
+        System.out.println(Arrays.toString(new CreateArray().multiplesOf(1)));
+        System.out.println(Arrays.toString(new CreateArray().multiplesOf(2)));
 
     }
 }

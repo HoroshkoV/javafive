@@ -251,14 +251,61 @@ public class OddEven {
         int m = array.length - index;
         for (int i = 0; i < array.length; i++) {
             if (array[i] > 0) {
-                negativeOnTheRight[n]=array[i];
+                negativeOnTheRight[n] = array[i];
                 n++;
 
-            }else {
-                negativeOnTheRight[m]=array[i];
+            } else {
+                negativeOnTheRight[m] = array[i];
                 m++;
             }
         }
-return negativeOnTheRight;
+        return negativeOnTheRight;
     }
+
+    //14.Написать алгоритм SumOfTwo, который принимает на вход массив целых чисел,
+// и число n. Алгоритм  возвращает пары элементов, которые в сумме дают число n.
+    public int[][] sumOfTwo(int[] array, int number) {
+        int ss = 0;
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] + array[j] == number) {
+
+                    ss++;
+                }
+            }
+        }
+        int[][] sumOfTwo = new int[ss][2];
+        int one = 0;
+
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] + array[j] == number) {
+                    sumOfTwo[one][0] = array[i];
+                    sumOfTwo[one][1] = array[j];
+                    one++;
+                }
+            }
+        }
+        return sumOfTwo;
+    }
+
+    //15.Написать алгоритм NumberOccurrences,  который принимает на вход массив целых чисел,  и возвращает массив пар
+//{число, сколько раз число встречается в массиве}
+    public int numberOccurrences(int[] array) {
+        array = sortArray(array);
+        int ww = 0;
+        int ss = 0;
+        for (int i = 0; i < array.length ; i = i + ss ) {
+            for (int j = 1; j < array.length; j++) {
+                if (array[i] == array[j]) {
+                    ss++;
+                }
+            }
+            if (ss != 1) {
+                ww++;
+            }
+        }
+        return ww;
+    }
+
 }
